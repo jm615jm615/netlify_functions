@@ -17,7 +17,6 @@ exports.handler = async function(event, context, callback) {
   const res = await axios.post('https://api.line.me/v2/bot/message/reply', data, {
     headers: {
       'Content-Type': 'application/json',
-      //LINEのアクセストークンをnetlifyの環境変数「CHANNEL_TOKEN」に設定しているのでそれを使用する
       'Authorization': `Bearer ${process.env.CHANNEL_TOKEN}`
     }
   })
