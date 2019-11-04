@@ -9,7 +9,7 @@ exports.handler = async function(event, context, callback) {
     messages: [
       {
         type: 'text',
-        text: 'Hello Netlify Bot'
+        text: 'ネガティブに決まってるだろ'
       }
     ]
   }
