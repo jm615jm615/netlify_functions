@@ -9,7 +9,7 @@ exports.handler = async function(event, context, callback) {
     messages: [
       {
         type: 'text',
-        text: 'ƒlƒKƒeƒBƒu‚ÉŒˆ‚Ü‚Á‚Ä‚é‚¾‚ë'
+        text: 'ãƒã‚¬ãƒ†ã‚£ãƒ–ã«æ±ºã¾ã£ã¦ã‚‹ã ã‚'
       }
     ]
   }
