@@ -11,5 +11,16 @@
   "scripts": {
     "build": "netlify-lambda build src/",
     "serve": "netlify-lambda serve src/"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jm615jm615/netlify_functions.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/jm615jm615/netlify_functions/issues"
+  },
+  "homepage": "https://github.com/jm615jm615/netlify_functions#readme",
+  "description": ""
 }

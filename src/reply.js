@@ -1,10 +1,6 @@
 import axios from 'axios'
 
-exports.handler = async function(event, context, callback) {
-  const webhookBody = JSON.parse(event.body)
-  console.log(webhookBody)
-
-
+//★ここから
 var data = ['アンジェ', 'プリンセス', 'ドロシー', 'ベアトリス', 'ちせ'];
  
 var getData = choose_at_random(data);
@@ -19,7 +15,11 @@ function choose_at_random(arrayData) {
     var arrayIndex = Math.floor(Math.random() * arrayData.length);
     return arrayData[arrayIndex];
 }
+//★ここまで
 
+exports.handler = async function(event, context, callback) {
+  const webhookBody = JSON.parse(event.body)
+  console.log(webhookBody)
 
 
   const data = {
@@ -32,6 +32,7 @@ function choose_at_random(arrayData) {
       }
     ]
   }
+  console.log(data)
 
   const res = await axios.post('https://api.line.me/v2/bot/message/reply', data, {
     headers: {
