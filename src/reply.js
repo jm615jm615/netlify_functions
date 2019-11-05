@@ -18,7 +18,7 @@ exports.handler = async function(event, context, callback) {
   const targetEvent = body.events[0]
 
   //メッセージ差し替え条件
-  const matchResult = targetEvent.message.text.match(/[\d+]|仕事はどう？/)
+  const matchResult = targetEvent.message.text.match(/仕事はどう？/)
   
   if (matchResult) {
     hoakinMessage = 'ネガティブに決まってるだろ'
