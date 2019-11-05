@@ -15,7 +15,7 @@ var hoakinMessage =  messageArray[Math.floor(Math.random() * messageArray.length
 
 exports.handler = async function(event, context, callback) {
   const webhookBody = JSON.parse(event.body)
-  console.log(webhookBody)
+  const targetEvent = body.events[0]
 
   //メッセージ差し替え条件
   const matchResult = targetEvent.message.text.match(/[\d+]|仕事はどう？/)
