@@ -20,6 +20,11 @@ exports.handler = async function(event, context, callback) {
   const webhookBody = JSON.parse(event.body)
   const targetEvent = body.events[0]
 
+  const matchResult = targetEvent.message.text.match(/仕事はどう？/)
+  if (matchResult) {
+    hoakinMessage = 'ネガティブに決まってるだろ'
+  }
+
   const data = {
     replyToken: webhookBody.events[0].replyToken,
     messages: [
