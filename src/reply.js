@@ -22,7 +22,7 @@ exports.handler = async function(event, context, callback) {
 
   //const matchResult = targetEvent.message.text.match(/仕事はどう？/)
   //indexOf()ではマッチしなかったとき-1を返す。マッチしたときは0以上の整数を返す。
-  if(targetEvent.message.text.indexOf('仕事はどう？') > -1){
+  if(targetEvent.message.indexOf('仕事はどう？') > -1){
     hoakinMessage = 'ネガティブに決まってるだろ'
   }
 
