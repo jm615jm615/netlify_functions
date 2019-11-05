@@ -1,5 +1,6 @@
-import axios from 'axios';
+import axios from 'axios'
 
+//
 //★ここから
 var messageArray = [
 'この人生以上に硬貨な死を望む', 
@@ -7,33 +8,30 @@ var messageArray = [
 'ずっとハッピーなのは難しい',
 '何が幸せだ　幸せなど一度もなかった',
 'だが今わかった、僕の人生は喜劇だ',
-'僕が舗道で死んでいても踏みつけるだろう？'
+'僕が舗道で死んでいても踏みつけるだろう？',
+'ネガティブに決まってるだろ'
 ];
 
 var hoakinMessage =  messageArray[Math.floor(Math.random() * messageArray.length)];
+
 //★ここまで
 
 exports.handler = async function(event, context, callback) {
-  const webhookBody = JSON.parse(event.body);
-  const targetEvent = body.events[0];
+  const webhookBody = JSON.parse(event.body)
+  console.log(webhookBody)
 
-  //メッセージ差し替え条件
-  const matchResult = targetEvent.message.text.match(/仕事はどう？/);
-  
-  if (matchResult) {
-    hoakinMessage = 'ネガティブに決まってるだろ';
-  }
 
   const data = {
     replyToken: webhookBody.events[0].replyToken,
     messages: [
       {
         type: 'text',
+        //text: 'ネガティブに決まってるだろ'
         text: hoakinMessage
       }
     ]
   }
-  console.log(data);
+  console.log(data)
 
   const res = await axios.post('https://api.line.me/v2/bot/message/reply', data, {
     headers: {
@@ -41,7 +39,7 @@ exports.handler = async function(event, context, callback) {
       'Authorization': `Bearer ${process.env.CHANNEL_TOKEN}`
     }
   })
-  console.log(res);
+  console.log(res)
 
   callback(null, {
     statusCode: 200,
