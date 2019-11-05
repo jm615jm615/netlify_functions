@@ -7,8 +7,7 @@ var messageArray = [
 'ずっとハッピーなのは難しい',
 '何が幸せだ　幸せなど一度もなかった',
 'だが今わかった、僕の人生は喜劇だ',
-'僕が舗道で死んでいても踏みつけるだろう？',
-'ネガティブに決まってるだろ'
+'僕が舗道で死んでいても踏みつけるだろう？'
 ];
 
 //var arrayIndex = Math.floor(Math.random() * messageArray.length);
@@ -18,16 +17,14 @@ var hoakinMessage =  messageArray[Math.floor(Math.random() * messageArray.length
 //★ここまで
 
 exports.handler = async function(event, context, callback) {
-  const webhookBody = JSON.parse(event.body)
-  console.log(webhookBody)
-
+  const webhookBody = JSON.parse(event.body);
+  const targetEvent = body.events[0];
 
   const data = {
     replyToken: webhookBody.events[0].replyToken,
     messages: [
       {
         type: 'text',
-        //text: 'ネガティブに決まってるだろ'
         text: hoakinMessage
       }
     ]
