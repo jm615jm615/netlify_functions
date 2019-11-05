@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-//
 //★ここから
 var messageArray = [
 'この人生以上に硬貨な死を望む', 
@@ -12,6 +11,8 @@ var messageArray = [
 'ネガティブに決まってるだろ'
 ];
 
+//var arrayIndex = Math.floor(Math.random() * messageArray.length);
+//var hoakinMessage =  messageArray[arrayIndex];
 var hoakinMessage =  messageArray[Math.floor(Math.random() * messageArray.length)];
 
 //★ここまで
