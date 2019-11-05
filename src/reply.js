@@ -1,20 +1,13 @@
 import axios from 'axios'
 
 //★ここから
-var data = ['アンジェ', 'プリンセス', 'ドロシー', 'ベアトリス', 'ちせ'];
+var messageArray = ['アンジェ', 'プリンセス', 'ドロシー', 'ベアトリス', 'ちせ'];
+
+var arrayIndex = Math.floor(Math.random() * messageArray.length);
+var hoakinMessage =  messageArray[arrayIndex];
+
+console.log(hoakinMessage);
  
-var getData = choose_at_random(data);
-console.log(getData);
- 
-/**
- * 配列の値からランダムで1つ選択して返す
- * @param arr arrayData (required) 選択する配列の内容
- * @return str
- */
-function choose_at_random(arrayData) {
-    var arrayIndex = Math.floor(Math.random() * arrayData.length);
-    return arrayData[arrayIndex];
-}
 //★ここまで
 
 exports.handler = async function(event, context, callback) {
@@ -28,7 +21,7 @@ exports.handler = async function(event, context, callback) {
       {
         type: 'text',
         //text: 'ネガティブに決まってるだろ'
-        text: getData
+        text: hoakinMessage
       }
     ]
   }
