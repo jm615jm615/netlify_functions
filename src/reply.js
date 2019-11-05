@@ -17,8 +17,8 @@ var hoakinMessage =  messageArray[Math.floor(Math.random() * messageArray.length
 //★ここまで
 
 exports.handler = async function(event, context, callback) {
-  const webhookBody = JSON.parse(event.body);
-  const targetEvent = body.events[0];
+  const webhookBody = JSON.parse(event.body)
+  const targetEvent = body.events[0]
 
   const data = {
     replyToken: webhookBody.events[0].replyToken,
