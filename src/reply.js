@@ -21,7 +21,7 @@ exports.handler = async function(event, context, callback) {
   const matchResult = targetEvent.message.text.match(/[\d+]|仕事はどう？/)
   
   if (matchResult) {
-    hoakinMessage = 'ネガティブに決まってるだろ';
+    hoakinMessage = 'ネガティブに決まってるだろ'
   }
 
   const data = {
