@@ -8,7 +8,7 @@ var messageArray = [
 '何が幸せだ　幸せなど一度もなかった',
 'だが今わかった、僕の人生は喜劇だ',
 '僕が舗道で死んでいても踏みつけるだろう？'
-];
+]
 
 var hoakinMessage =  messageArray[Math.floor(Math.random() * messageArray.length)];
 //★ここまで
