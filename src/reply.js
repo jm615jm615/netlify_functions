@@ -1,13 +1,20 @@
 import axios from 'axios'
 
 //★ここから
-var messageArray = ['アンジェ', 'プリンセス', 'ドロシー', 'ベアトリス', 'ちせ'];
+var messageArray = [
+'この人生以上に硬貨な死を望む', 
+'母はいつも言うんだ　あなたの幸せな笑顔がみんなを楽しませると',
+'ずっとハッピーなのは難しい',
+'何が幸せだ　幸せなど一度もなかった',
+'だが今わかった、僕の人生は喜劇だ',
+'僕が舗道で死んでいても踏みつけるだろう？',
+'ネガティブに決まってるだろ'
+];
 
-var arrayIndex = Math.floor(Math.random() * messageArray.length);
-var hoakinMessage =  messageArray[arrayIndex];
+//var arrayIndex = Math.floor(Math.random() * messageArray.length);
+//var hoakinMessage =  messageArray[arrayIndex];
+var hoakinMessage =  messageArray[Math.floor(Math.random() * messageArray.length)];
 
-console.log(hoakinMessage);
- 
 //★ここまで
 
 exports.handler = async function(event, context, callback) {
